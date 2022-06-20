@@ -1,0 +1,40 @@
+.section-difference {
+  padding-top: 94px;
+  padding-bottom: 0px;
+}
+.differens-list {
+  @extend %list;
+  display: flex;
+  text-align: start;
+  justify-content: space-between;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__icon-box {
+    width: 270px;
+    height: 120px;
+    background-size: content;
+    background-repeat: no-repeat;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    background-position: center;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    color: $title-text-color;
+    line-height: 1.14;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__paragraph {
+    color: $primary-text-color;
+    line-height: 1.73;
+    font-size: 14px;
+  }
+}

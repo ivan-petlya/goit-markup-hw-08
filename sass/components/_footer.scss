@@ -1,0 +1,170 @@
+.footer {
+  background-color: $secondary-bg-color;
+  color: $white-text-color;
+  font-size: 14px;
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: baseline;
+}
+.footer-contact-block {
+  margin-right: 70px;
+
+  &__text-logo {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.text-logo--white-color {
+  color: $white-text-color;
+}
+.footer-contact-address {
+  display: block;
+  font-style: normal;
+
+  &__phisical-address {
+    color: $white-text-color;
+    text-align: left;
+    margin-bottom: 9px;
+  }
+}
+
+.footer-contact-address-list {
+  color: $contact-text-color;
+  @extend %list;
+  text-align: left;
+  display: inline;
+
+  &__contact-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__contact-link {
+    color: inherit;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color $duration $timing-function;
+  }
+  &__contact-link:hover,
+  &__contact-link:focus {
+    color: $accent-color;
+  }
+}
+.input-mail-footer:focus {
+  border-color: $accent-color;
+  outline: none;
+}
+
+.invite-footer {
+  &__title {
+    line-height: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $main-bg-color;
+    transition: fill $duration $timing-function;
+    transition: background-color $duration $timing-function;
+  }
+  &__social-link:hover,
+  &__social-link:focus {
+    background-color: $accent-color;
+    fill: $white-text-color;
+  }
+  &__social-icon {
+    color: currentColor;
+  }
+}
+
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 93px;
+  &__title {
+    line-height: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  &__block {
+    display: flex;
+  }
+  &__input {
+    font-size: 16px;
+    color: $primary-text-color;
+    padding-left: 15px;
+    height: 50px;
+    width: 385px;
+    background-color: $secondary-bg-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: border-color $duration $timing-function,
+      outline $duration $timing-function;
+  }
+  &__input:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
+  &__button {
+    display: flex;
+    padding-left: 29px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2196f3;
+    border-radius: 4px;
+    border-color: transparent;
+    color: $white-text-color;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    transition: color $duration $timing-function,
+      background-color $duration $timing-function,
+      box-shadow $duration $timing-function;
+  }
+  &__button:focus,
+  &__button:hover {
+    background-color: $main-button-hover-color;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+  }
+  &__button-icon {
+    margin-left: 10px;
+    fill: currentColor;
+  }
+}

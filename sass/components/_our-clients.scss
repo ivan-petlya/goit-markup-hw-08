@@ -1,0 +1,39 @@
+.section-clients {
+  @extend %section;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+}
+.our-clients-list {
+  @extend %list;
+  padding: none;
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__link {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #afb1b8;
+    transition: color $duration $timing-function,
+      border $duration $timing-function;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+  }
+  &__logo {
+    fill: currentColor;
+    border: currentColor;
+  }
+}

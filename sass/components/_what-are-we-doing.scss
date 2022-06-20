@@ -1,0 +1,51 @@
+.what-are-we-doing-section {
+  @extend %section;
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.67;
+  }
+}
+.what-are-we-doing-list {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__item {
+    width: 100%;
+  }
+  &__thumb {
+    position: relative;
+    display: flex;
+  }
+  &__text-box {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    letter-spacing: 3%;
+    width: 370px;
+    height: 70px;
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    );
+  }
+  &__text {
+    text-transform: uppercase;
+    color: $white-text-color;
+    font-size: 14px;
+    line-height: 1.14;
+    white-space: nowrap;
+    letter-spacing: 0.42px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
