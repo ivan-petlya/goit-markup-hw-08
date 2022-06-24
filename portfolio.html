@@ -23,25 +23,45 @@
   </head>
   <body>
     <!--header-->
-    <header class="header">
-      <div class="header-container container">
+       <header class="header">
+      <div class="header-container">
         <a class="text-logo" href="./index.html">
           Web<span class="text-logo__black">Studio</span>
         </a>
-        <nav>
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-close" href="./images/sprite.svg#icon-close_40px"></use>
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu_40px"></use>
+            </svg>
+          </button>
+
+          <div class="menu-container" id="menu-container" data-menu>
+
+
+
+        <nav class="header-nav">
           <ul class="navigate">
             <li class="navigate__item">
-              <a href="./index.html" class="navigate__link">Студия</a>
+              <a href="./index.html" class="navigate__link active">Студия</a>
             </li>
             <li class="navigate__item">
-              <a href="./portfolio.html" class="navigate__link active"
-                >Портфолио</a
-              >
+              <a href="./portfolio.html" class="navigate__link">Портфолио</a>
             </li>
             <li class="navigate__item">
               <a href="#contacts" class="navigate__link">Контакты</a>
             </li>
           </ul>
+          
         </nav>
         <ul class="header-contact">
           <li class="header-contact__item">
@@ -61,6 +81,21 @@
             >
           </li>
         </ul>
+        <ul class="header-mob-soc-list">
+                    <li class="header-mob-soc-list__item">
+                        <a href="" class="header-mob-soc-list__link">Instagram</a><a>
+                        </a></li><a>
+                    </a><li class="header-mob-soc-list__item"><a>
+                        </a><a href="" class="header-mob-soc-list__link">Twitter</a>
+                    </li>
+                    <li class="header-mob-soc-list__item">
+                        <a href="" class="header-mob-soc-list__link">Facebook</a>
+                    </li>
+                    <li class="header-mob-soc-list__item">
+                        <a href="" class="header-mob-soc-list__link">Linkedin</a>
+                    </li>
+
+                </ul>
       </div>
     </header>
     <main>
@@ -419,5 +454,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

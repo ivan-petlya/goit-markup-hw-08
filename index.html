@@ -19,52 +19,91 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <title>Home_work_7</title>
+    <title>Home_work_8</title>
   </head>
   <body>
     <!--header-->
     <header class="header">
-      <div class="header-container container">
+      <div class="header-container">
         <a class="text-logo" href="./index.html">
           Web<span class="text-logo__black">Studio</span>
         </a>
-        <nav>
-          <ul class="navigate">
-            <li class="navigate__item">
-              <a href="./index.html" class="navigate__link active">Студия</a>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="icon-close"
+              href="./images/sprite.svg#icon-close_40px"
+            ></use>
+            <use
+              class="icon-menu"
+              href="./images/sprite.svg#icon-menu_40px"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="header-nav">
+            <ul class="navigate">
+              <li class="navigate__item">
+                <a href="./index.html" class="navigate__link active">Студия</a>
+              </li>
+              <li class="navigate__item">
+                <a href="./portfolio.html" class="navigate__link">Портфолио</a>
+              </li>
+              <li class="navigate__item">
+                <a href="#contacts" class="navigate__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-contact">
+            <li class="header-contact__item">
+              <a class="header-contact__link" href="mailto:info@devstudio.com">
+                <svg width="16" height="12" class="header-contact__icon">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="navigate__item">
-              <a href="./portfolio.html" class="navigate__link">Портфолио</a>
-            </li>
-            <li class="navigate__item">
-              <a href="#contacts" class="navigate__link">Контакты</a>
+            <li class="header-contact__item">
+              <a class="header-contact__link" href="tel:+380991111111"
+                ><svg width="10" height="16" class="header-contact__icon">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 099 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header-contact">
-          <li class="header-contact__item">
-            <a class="header-contact__link" href="mailto:info@devstudio.com">
-              <svg width="16" height="12" class="header-contact__icon">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-contact__item">
-            <a class="header-contact__link" href="tel:+380991111111"
-              ><svg width="10" height="16" class="header-contact__icon">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 099 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="header-mob-soc-list">
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Instagram</a>
+            </li>
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Twitter</a>
+            </li>
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Facebook</a>
+            </li>
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Linkedin</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
       <!--block with button-->
       <section class="section-main">
-        <div class="container">
+        <div class="section-main__container">
           <h1 class="section-main__title">
             Эффективные решения <br />
             для вашего бизнеса
@@ -76,7 +115,7 @@
       </section>
       <!--difference-->
       <section class="section-difference">
-        <div class="container">
+        <div class="section-difference__container">
           <h2 class="visually-hidden">наши особенности</h2>
           <ul class="differens-list">
             <li class="differens-list__item">
@@ -188,7 +227,7 @@
       </section>
       <!--team-->
       <section class="section-team">
-        <div class="container">
+        <div class="section-team__container">
           <h2 class="section-team__header">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
@@ -373,7 +412,7 @@
         </div>
       </section>
       <section class="section-clients">
-        <div class="container">
+        <div class="section-clients__container">
           <h2 class="section-clients__title">Постоянные клиенты</h2>
           <ul class="our-clients-list">
             <li class="our-clients-list__item">
@@ -500,7 +539,11 @@
             />
             <button class="footer-subscribe-form__button" type="submit">
               Подписаться
-              <svg class="footer-subscribe-form__button-icon" width="24" height="24">
+              <svg
+                class="footer-subscribe-form__button-icon"
+                width="24"
+                height="24"
+              >
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
             </button>
@@ -538,7 +581,7 @@
               </svg>
             </li>
             <li class="modal-form__item">
-              <label class="modal-form__lable for="tel">Телефон</label>
+              <label class="modal-form__lable" for="tel">Телефон</label>
               <input
                 class="modal-form__input"
                 type="tel"
@@ -555,7 +598,7 @@
               </svg>
             </li>
             <li class="modal-form__item">
-              <label class="modal-form__lable for="e-mail">Почта</label>
+              <label class="modal-form__lable" for="e-mail">Почта</label>
               <input
                 class="modal-form__input"
                 type="email"
@@ -572,7 +615,7 @@
               </svg>
             </li>
             <li class="modal-form__item">
-              <label class="modal-form__lable for="comment">Комментарий</label>
+              <label class="modal-form__lable" for="comment">Комментарий</label>
               <textarea
                 rows="5"
                 cols="10"
@@ -585,9 +628,16 @@
           </ul>
           <div class="check-box-modal">
             <label class="check-box-modal__text">
-              <input class="check-box-modal__checkbox visually-hidden" type="checkbox" name="policy" />
-              <span class="check-box-modal__icon-check"> </span> Соглашаюсь с рассылкой и
-              принимаю <a class="check-box-modal__link" href=""> Условия договора</a></label
+              <input
+                class="check-box-modal__checkbox visually-hidden"
+                type="checkbox"
+                name="policy"
+              />
+              <span class="check-box-modal__icon-check"> </span> Соглашаюсь с
+              рассылкой и принимаю
+              <a class="check-box-modal__link" href="">
+                Условия договора</a
+              ></label
             >
           </div>
           <button class="modal-form-button-submit" type="submit">
@@ -597,5 +647,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

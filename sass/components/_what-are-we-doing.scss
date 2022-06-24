@@ -1,4 +1,8 @@
 .what-are-we-doing-section {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   @extend %section;
   &__title {
     margin-bottom: 50px;

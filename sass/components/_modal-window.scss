@@ -24,9 +24,6 @@
   left: 50%;
   transform: (-50%, -50%);
 
-  width: 528px;
-  height: 581px;
-
   background-color: $main-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -34,6 +31,12 @@
 
   transform: translate(-50%, -50%);
   transition: transform var(--duration) var(--timing-function);
+  width: 528px;
+  height: 581px;
+  @media screen and(max-width: 767px) {
+    width: 450px;
+    height: 609px;
+  }
 
   &__close-button {
     position: absolute;
@@ -80,14 +83,22 @@
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
+  @media screen and(max-width: 767px) {
+    width: 450px;
+    height: 609px;
+  }
   &__header {
+    text-align: center;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
+    @media screen and(min-width: $desktop) {
+      text-align: left;
+    }
   }
   &__list {
     @extend %list;
-    width: 448px;
+    width: 100%;
     height: 342px;
   }
 
@@ -137,7 +148,7 @@
     padding: 12px 16px;
     resize: none;
     height: 120px;
-    width: 448px;
+    width: 100%;
     transition: border-color $duration $timing-function,
       outline $duration $timing-function;
   }
@@ -150,8 +161,12 @@
   justify-content: center;
 
   &__text {
+    font-size: 12px;
     display: flex;
     align-items: center;
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
   &__icon-check {
     margin-right: 10px;

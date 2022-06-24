@@ -1,15 +1,22 @@
 .section-main {
+  text-align: center;
+  max-width: 480px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    height: 400px;
+  }
+  @media screen and(
+    min-width: 1200px  ) {
+    max-width: 1600px;
+    height: 600px;
+  }
   background-color: $secondary-bg-color;
   color: $white-text-color;
-  font-size: 44px;
   line-height: 1.36;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
+
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -21,20 +28,27 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  &__container {
+    @extend %container;
+  }
 
   &__title {
-    font-size: 44px;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.36;
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
+
+    @media screen and(
+    min-width: 1200px  ) {
+      font-size: 44px;
+    }
   }
 
   &__button {
     font-family: inherit;
-    color: var(--title-text-color);
+    color: $title-text-color;
     border-color: transparent;
     font-weight: 500;
     font-size: 16px;
