@@ -44,7 +44,7 @@ body {
 .navigate {
   text-align: left;
   @extend %list;
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 302px;
   }
   @media screen and (min-width: $tablet) {
@@ -97,19 +97,25 @@ body {
   }
 }
 .header-contact {
-  margin-left: auto;
   list-style: none;
-  min-width: 140px;
-  padding: 0px;
+  @extend %list;
+  display: flex;
 
   @media screen and (max-width: 767px) {
-    display: flex;
+    margin-left: auto;
     align-items: flex-start;
     flex-direction: column-reverse;
+    margin: 0px;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     flex-direction: column;
-    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
   }
   &__item {
   }
@@ -130,14 +136,16 @@ body {
       padding-top: 32px;
       padding-bottom: 32px;
       font-size: 14px;
+      line-height: 1.16;
     }
     @media screen and (max-width: 767px) {
       font-size: 24px;
     }
-    display: block;
+    align-items: center;
+    display: flex;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     text-decoration: none;
 
@@ -158,11 +166,17 @@ body {
     @media screen and (max-width: 767px) {
       display: none;
     }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-right: 8px;
+      min-height: 10px;
+    }
+
     fill: currentColor;
     margin-right: 10px;
     padding: 0px;
     transition: fill $duration $timing-function;
   }
+
   &__icon:hover {
     fill: $accent-color;
   }
@@ -193,6 +207,7 @@ body {
 }
 
 .menu-container {
+  width: 100%;
   @media screen and(min-width: $tablet) {
     display: flex;
     align-items: center;

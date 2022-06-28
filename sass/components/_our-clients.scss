@@ -15,23 +15,29 @@
 }
 .our-clients-list {
   @extend %list;
-  padding: none;
-  display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 
   &__item {
-    margin-left: 30px;
-    margin-top: 30px;
-  }
-  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: calc((100% - 60px) / 3);
+    }
     @media screen and (min-width: $desktop) {
-      margin-right: 30px;
+      width: calc((100% - 150px) / 6);
     }
   }
+
+  // &__item:not(:last-child) {
+  //   @media screen and (min-width: $desktop) {
+  //     margin-right: 30px;
+  //   }
+  // }
   &__link {
-    min-width: 210px;
     height: 92px;
     display: flex;
     justify-content: center;
@@ -42,9 +48,6 @@
     color: #afb1b8;
     transition: color $duration $timing-function,
       border $duration $timing-function;
-    @media screen and (min-width: $tablet) {
-      width: 170px;
-    }
   }
 
   &__link:hover,

@@ -2,23 +2,33 @@
   @extend %section;
   &__container {
     @extend %container;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
     text-align: center;
   }
   &__filter-list {
     @extend %list;
-    margin-bottom: 50px;
+
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $tablet) and(max-width:1199px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
   }
   &__filter-item {
+    margin-bottom: 10px;
     box-shadow: $duration $timing-function;
     &:not(:last-child) {
       margin-right: 8px;
     }
   }
+
   &__filter-button {
     font-family: inherit;
     color: $title-text-color;
@@ -45,13 +55,23 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
+    gap: 30px;
+    // margin-top: -30px;
+    // margin-left: -30px;
   }
   &__item {
-    width: 370px;
-    margin-top: 30px;
-    margin-left: 30px;
+    @media screen and (max-width: 767px) {
+      width: 450px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 60px) / 3);
+    }
+    // width: 370px;
+    // margin-top: 30px;
+    // margin-left: 30px;
   }
   &__link {
     display: block;

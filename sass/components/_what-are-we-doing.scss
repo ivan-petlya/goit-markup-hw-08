@@ -1,14 +1,17 @@
 .what-are-we-doing-section {
-  @media screen and (max-width: 767px) {
+  @extend %section;
+  @media screen and (max-width: 1199px) {
     display: none;
   }
-
-  @extend %section;
   &__title {
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.67;
+  }
+
+  &__container {
+    @extend %container;
   }
 }
 .what-are-we-doing-list {
