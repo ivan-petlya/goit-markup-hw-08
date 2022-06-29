@@ -7,45 +7,78 @@
 }
 .footer-container {
   @extend %container;
-
-  display: flex;
-  flex-direction: column;
+  @media screen and(max-width: 767px) {
+    flex-direction: row;
+    flex-wrap: no-wrap;
+  }
+  @media screen and(min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  @media screen and(min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
   align-items: center;
 }
 .footer-contact-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0px;
+  @media screen and(max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  @media screen and(max-width: 1199px) {
+    text-align: center;
+    margin-right: 165px;
+  }
+  @media screen and(min-width: $desktop) {
+    margin-right: 70px;
+  }
+
   &__text-logo {
     margin-right: 0;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 }
+
 .text-logo--white-color {
   color: $white-text-color;
 }
 .footer-contact-address {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 20px;
   font-style: normal;
+  @media screen and(max-width: 767px) {
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and(min-width: $tablet) {
+    text-align: center;
+  }
 
   &__phisical-address {
     color: $white-text-color;
-    text-align: left;
+    text-align: center;
     margin-bottom: 9px;
+    @media screen and(min-width: $desktop) {
+      text-align: left;
+    }
   }
 }
 
 .footer-contact-address-list {
   color: $contact-text-color;
   @extend %list;
-  text-align: left;
+  text-align: center;
   display: inline;
-
+  @media screen and(min-width: $desktop) {
+    text-align: left;
+  }
   &__contact-item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -71,10 +104,19 @@
 }
 
 .invite-footer {
-  margin: 60px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and(max-width: 768px) {
+    margin-top: 60px;
+  }
+  @media screen and(min-width: $tablet) and(max-width: 1199px) {
+    margin-top: 0;
+  }
+
+  @media screen and(min-width: $desktop) {
+    align-items: flex-start;
+  }
 
   &__title {
     line-height: 100%;
@@ -118,20 +160,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and(max-width: 1199px) {
+    margin-top: 60px;
+  }
+  @media screen and(min-width: $desktop) {
+    align-items: flex-start;
+    margin-left: 93px;
+  }
 
   &__title {
     line-height: 100%;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;
-
-    text-align: left;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
   }
   &__block {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    @media screen and(max-width: 1199px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__input {
     font-size: 16px;
@@ -139,13 +192,20 @@
     padding-left: 15px;
     height: 50px;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
     background-color: $secondary-bg-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     transition: border-color $duration $timing-function,
       outline $duration $timing-function;
+    @media screen and(max-width: 1199px) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    @media screen and(min-width: $desktop) {
+      width: 385px;
+    }
   }
   &__input:focus {
     border-color: $accent-color;
@@ -169,6 +229,9 @@
     transition: color $duration $timing-function,
       background-color $duration $timing-function,
       box-shadow $duration $timing-function;
+    @media screen and(min-width: $desktop) {
+      margin-left: 12px;
+    }
   }
   &__button:focus,
   &__button:hover {

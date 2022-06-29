@@ -23,79 +23,83 @@
   </head>
   <body>
     <!--header-->
-       <header class="header">
+    <header class="header">
       <div class="header-container">
         <a class="text-logo" href="./index.html">
           Web<span class="text-logo__black">Studio</span>
         </a>
-          <button
-            type="button"
-            class="menu-button"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
           >
-            <svg
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню"
-            >
-              <use class="icon-close" href="./images/sprite.svg#icon-close_40px"></use>
-              <use class="icon-menu" href="./images/sprite.svg#icon-menu_40px"></use>
-            </svg>
-          </button>
+            <use
+              class="icon-close"
+              href="./images/sprite.svg#icon-close_40px"
+            ></use>
+            <use
+              class="icon-menu"
+              href="./images/sprite.svg#icon-menu_40px"
+            ></use>
+          </svg>
+        </button>
 
-          <div class="menu-container" id="menu-container" data-menu>
-
-
-
-        <nav class="header-nav">
-          <ul class="navigate">
-            <li class="navigate__item">
-              <a href="./index.html" class="navigate__link active">Студия</a>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="header-nav">
+            <ul class="navigate">
+              <li class="navigate__item">
+                <a href="./index.html" class="navigate__link">Студия</a>
+              </li>
+              <li class="navigate__item">
+                <a href="./portfolio.html" class="navigate__link active"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigate__item">
+                <a href="#contacts" class="navigate__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-contact">
+            <li class="header-contact__item">
+              <a class="header-contact__link" href="mailto:info@devstudio.com">
+                <svg width="16" height="12" class="header-contact__icon">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="navigate__item">
-              <a href="./portfolio.html" class="navigate__link">Портфолио</a>
-            </li>
-            <li class="navigate__item">
-              <a href="#contacts" class="navigate__link">Контакты</a>
+            <li class="header-contact__item">
+              <a class="header-contact__link" href="tel:+380991111111"
+                ><svg width="10" height="16" class="header-contact__icon">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 099 111 11 11</a
+              >
             </li>
           </ul>
-          
-        </nav>
-        <ul class="header-contact">
-          <li class="header-contact__item">
-            <a class="header-contact__link" href="mailto:info@devstudio.com">
-              <svg width="16" height="12" class="header-contact__icon">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-contact__item">
-            <a class="header-contact__link" href="tel:+380991111111"
-              ><svg width="10" height="16" class="header-contact__icon">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 099 111 11 11</a
-            >
-          </li>
-        </ul>
-        <ul class="header-mob-soc-list">
-                    <li class="header-mob-soc-list__item">
-                        <a href="" class="header-mob-soc-list__link">Instagram</a><a>
-                        </a></li><a>
-                    </a><li class="header-mob-soc-list__item"><a>
-                        </a><a href="" class="header-mob-soc-list__link">Twitter</a>
-                    </li>
-                    <li class="header-mob-soc-list__item">
-                        <a href="" class="header-mob-soc-list__link">Facebook</a>
-                    </li>
-                    <li class="header-mob-soc-list__item">
-                        <a href="" class="header-mob-soc-list__link">Linkedin</a>
-                    </li>
-
-                </ul>
+          <ul class="header-mob-soc-list">
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Instagram</a>
+            </li>
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Twitter</a>
+            </li>
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Facebook</a>
+            </li>
+            <li class="header-mob-soc-list__item">
+              <a href="" class="header-mob-soc-list__link">Linkedin</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
