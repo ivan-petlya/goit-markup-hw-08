@@ -13,11 +13,11 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  @media screen and (min-width: $tablet) {
-    // justify-content: space-between;
+  @media screen and (min-width: $mobile) {
+    margin: 0px auto;
   }
   @media screen and (max-width: 767px) {
-    justify-content: space-between;
+    margin: 0px;
   }
 }
 
@@ -205,6 +205,7 @@ body {
 
 .menu-button .icon-close {
   display: none;
+  position: fixed;
 }
 
 .menu-button.is-open .icon-close {

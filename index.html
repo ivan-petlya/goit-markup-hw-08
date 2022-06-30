@@ -176,13 +176,18 @@
           <ul class="what-are-we-doing-list">
             <li class="what-are-we-doing-list__item">
               <div class="what-are-we-doing-list__thumb">
-                <img
-                  class="what-are-diong-list__image"
-                  src="images/coding.jpg"
-                  alt="coding"
-                  height="295"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/coding.jpg     1x,
+                      ./images/desktop/coding-@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px" />
+                  <img
+                    scr="./images/desktop/coding.jpg"
+                    class="what-are-diong-list__image"
+                    alt="coding"/>
+                  </picture>
                 <div class="what-are-we-doing-list__text-box">
                   <h3 class="what-are-we-doing-list__text">
                     Десктопные приложения
@@ -192,13 +197,18 @@
             </li>
             <li class="what-are-we-doing-list__item">
               <div class="what-are-we-doing-list__thumb">
-                <img
-                  class="what-are-diong-list__image"
-                  src="images/mobile-dev.jpg"
-                  height="295"
-                  width="370"
-                  alt="mobile develop"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desktop/mobile-dev.jpg 1x,
+                      ./images/desktop/mobile-dev-@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px" />
+                  <img
+                    class="what-are-diong-list__image"
+                    src="./images/desktop/mobile-dev.jpg"
+                    alt="mobile develop"
+                /></picture>
                 <div class="what-are-we-doing-list__text-box">
                   <h3 class="what-are-we-doing-list__text">
                     Мобильные приложения
@@ -208,13 +218,20 @@
             </li>
             <li class="what-are-we-doing-list__item">
               <div class="what-are-we-doing-list__thumb">
-                <img
-                  class="what-are-diong-list__image"
-                  src="images/color-palet.jpg "
-                  height="295"
-                  width="370"
-                  alt="creative-artist-web-design-with-working-colour-selection-graphic-tablet"
+                <picture>
+                  <source
+                  media="(min-width: 1200px)" 
+                    srcset="
+                      ./images/desktop/color-palet.jpg     1x,
+                      ./images/desktop/color-palet-@2x.jpg 2x
+                    "
+                    />
+                  <img
+                    class="what-are-diong-list__image"
+                    src="./images/desktop/color-palet.jpg "
+                    alt="creative-artist-web-design-with-working-colour-selection-graphic-tablet"
                 />
+              </picture>
                 <div class="what-are-we-doing-list__text-box">
                   <h3 class="what-are-we-doing-list__text">
                     Дизайнерские решения
@@ -231,13 +248,29 @@
           <h2 class="section-team__header">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
+              <pictire>
+                <source
+                media="(min-width: 1200px)"
+                srcset="./images/desktop/igor_demjanenko.jpg 1x,
+                ./images/desktop/igor_demjanenko-@2x.jpg 2x"
+                />
+                <source
+               media="(min-width: 768px)"
+                srcset="./images/tablet/igor_demjanenko-354/img@1x.jpg 1x,
+                ./images/tablet/igor_demjanenko-354/img@2x.jpg 2x "
+                 />
+                <source
+                media="(min-width: 320px)"
+                srcset="./images/mobile/igor_demjanenko-450/img@1x.jpg 1x,
+                ./images/mobile/igor_demjanenko-450/img@2x.jpg 2x "
+                />
               <img
                 class="team-list__photo"
-                src="images/igor_demjanenko.jpg"
+                src="./images/desktop/igor_demjanenko.jpg"
                 height="460"
                 width="450"
                 alt="demjanenko.jpg"
-              />
+              /></pictire>
               <div class="team-list__co-worker-info">
                 <h3 class="team-list__co-worker-name">Игорь Демьяненко</h3>
                 <p class="team-list__co-worker-position" lang="en">
@@ -276,13 +309,37 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                media="(min-width: 1200px)"
+                  srcset=" ./images/desktop/olga_repina.jpg
+                       1x,
+                    ./images/desktop/olga_repina-@2x.jpg 2x
+                  "
+                                  />
+                <source 
+                media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/repina-354/img@1x.jpg   1x,
+                    ./images/tablet/repina-354/img@2x.jpg 2x
+                  "
+                                 />
+                <source
+                media="(min-width: 320px)"
+                  srcset="
+                  ./images/mobile/repina-450/img@1x.jpg     1x,
+                    ./images/mobile/repina-450/img@2x.jpg  2x
+                  "
+                                  />
+                <img
                 class="team-list__photo"
-                src="images/olga_repina.jpg"
+                src="./images/desktop/olga_repina.jpg"
                 height="460"
                 width="450"
                 alt="olga_repina"
               />
+              </picture>
+              
               <div class="team-list__co-worker-info">
                 <h3 class="team-list__co-worker-name">Ольга Репина</h3>
                 <p class="team-list__co-worker-position" lang="en">
@@ -321,13 +378,29 @@
               </div>
             </li>
             <li class="team-list__item">
+              <pictire>
+                <source
+                media="(min-width: 1200px)"
+                srcset="./images/desktop/nikolay_tarasov.jpg 1x,
+                ./images/desktop/nikolay_tarasov-@2x.jpg 2x"
+                />
+                <source
+               media="(min-width: 768px)"
+                srcset="./images/tablet/tarasov-354/img@1x.jpg 1x,
+                ./images/tablet/tarasov-354/img@2x.jpg 2x "
+                 />
+                <source
+                media="(min-width: 320px)"
+                srcset="./images/mobile/tarasov-450/img@1x.jpg 1x,
+                ./images/mobile/tarasov-450/img@2x.jpg 2x"
+                />
               <img
                 class="team-list__photo"
-                src="images/nikolay_tarasov.jpg"
+                src="./images/desktop/nikolay_tarasov.jpg"
                 height="460"
                 width="450"
                 alt="nikolay_tarasov"
-              />
+              /></picture>
               <div class="team-list__co-worker-info">
                 <h3 class="team-list__co-worker-name">Николай Тарасов</h3>
                 <p class="team-list__co-worker-position" lang="en">Marketing</p>
@@ -364,13 +437,34 @@
               </div>
             </li>
             <li class="team-list__item">
+              <picture>
+                <source
+                media="(min-width: 1200px)"
+                  srcset=" ./images/desktop/mihail_ermakov.jpg
+                       1x,
+                    ./images/desktop/mihail_ermakov-@2x.jpg 2x
+                  "
+                />
+                <source 
+                media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/ermakov-354/img@1x.jpg   1x,
+                    ./images/tablet/ermakov-354/img@2x.jpg 2x
+                  "
+                  />
+                <source
+                media="(min-width: 320px)"
+                  srcset="
+                  ./images/mobile/ermakov-450/img@1x.jpg     1x,
+                    ./images/mobile/ermakov-450/img@2x.jpg  2x"
+                     />
               <img
                 class="team-list__photo"
                 src="images/mihail_ermakov.jpg"
                 height="460"
                 width="450"
                 alt="mihail_ermakov"
-              />
+              /></picture>
               <div class="team-list__co-worker-info">
                 <h3 class="team-list__co-worker-name">Михаил Ермаков</h3>
                 <p class="team-list__co-worker-position" lang="en">

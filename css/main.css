@@ -101,11 +101,14 @@ body {
           align-items: center;
   text-align: center;
 }
+@media screen and (min-width: 480px) {
+  .header-container {
+    margin: 0px auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .header-container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    margin: 0px;
   }
 }
 
@@ -345,6 +348,7 @@ body {
 
 .menu-button .icon-close {
   display: none;
+  position: fixed;
 }
 
 .menu-button.is-open .icon-close {
@@ -437,7 +441,7 @@ body {
 
 .section-main {
   text-align: center;
-  max-width: 480px;
+  max-width: 100%;
   padding-top: 120px;
   padding-bottom: 120px;
   margin-left: auto;
@@ -447,22 +451,44 @@ body {
   line-height: 1.36;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/team-working.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/team-working.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/team-working-480/team-working-480--x1.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/team-working-480/team-working-480--x1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .section-main {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/team-working-480/team-working-480--x2.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/team-working-480/team-working-480--x2.jpg");
+  }
 }
 @media screen and (min-width: 768px) {
   .section-main {
     max-width: 768px;
     height: 400px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/team-working-768/team-working-768--@1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/team-working-768/team-working-768--@1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .section-main {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/team-working-768/team-working-768--@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/team-working-768/team-working-768--@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .section-main {
     max-width: 1600px;
     height: 600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop/team-working-1600/team-working-1600--@1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/team-working-1600/team-working-1600--@1x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .section-main {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop/team-working-1600/team-working-1600--@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/team-working-1600/team-working-1600--@2x.jpg");
   }
 }
 .section-main__title {
