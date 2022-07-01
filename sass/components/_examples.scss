@@ -22,10 +22,15 @@
     }
   }
   &__filter-item {
-    margin-bottom: 10px;
     box-shadow: $duration $timing-function;
     &:not(:last-child) {
       margin-right: 8px;
+    }
+  }
+
+  &__filter-item:nth-child(-n + 3) {
+    @media screen and(max-width:767px) {
+      margin-bottom: 10px;
     }
   }
 

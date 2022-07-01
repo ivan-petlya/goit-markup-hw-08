@@ -105,6 +105,8 @@ body {
   display: flex;
 
   @media screen and (max-width: 767px) {
+    position: absolute;
+    bottom: 134px;
     margin-left: auto;
     align-items: flex-start;
     flex-direction: column-reverse;
@@ -247,6 +249,8 @@ body {
 
 .header-mob-soc-list {
   @extend %list;
+  position: absolute;
+  bottom: 48px;
   @media screen and (min-width: $tablet) {
     display: none;
   }
