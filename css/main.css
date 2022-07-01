@@ -611,8 +611,10 @@ body {
     margin-right: 70px;
   }
 }
-.footer-contact-block__text-logo {
-  margin-right: 0;
+@media screen and (max-width: 1199px) {
+  .footer-contact-block__text-logo {
+    margin-right: 0;
+  }
 }
 
 .text-logo--white-color {
