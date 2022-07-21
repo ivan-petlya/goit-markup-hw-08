@@ -186,37 +186,50 @@ body {
     fill: $accent-color;
   }
 }
-.menu-button {
+.menu-toggle {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  display: inline-flex;
+  top: 16px;
+  right: 16px;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  border: none;
   background-color: transparent;
-  z-index: 6;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
-.menu-button:hover,
-.menu-button:focus {
-  fill: $accent-color;
-}
+// .menu-toggle {
+//   position: absolute;
+//   top: 16px;
+//   right: 16px;
+  
+// }
+// .menu-toggle:hover,
+// .menu-toggle:focus {
+//   fill: $accent-color;
+// }
 
-.menu-button .icon-close {
-  display: none;
-  position: fixed;
-}
+// .menu-toggle .icon-close {
+//   display: none;
+//   position: fixed;
+// }
 
-.menu-button.is-open .icon-close {
-  display: block;
-}
+// .menu-toggle.is-open .icon-close {
+//   display: block;
+//   position: fixed;
+// }
 
-.menu-button.is-open .icon-menu {
-  display: none;
-}
+// .menu-toggle.is-open .icon-menu {
+//   display: none;
+// }
 
 .menu-container {
   width: 100%;

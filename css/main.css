@@ -19,8 +19,6 @@ p {
 
 img {
   max-width: 100%;
-  width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -324,41 +322,33 @@ body {
   fill: #2196f3;
 }
 
-.menu-button {
+.menu-toggle {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  top: 16px;
+  right: 16px;
+  min-height: 40px;
+  min-width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
-  border: none;
   background-color: transparent;
-  z-index: 6;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
 }
 @media screen and (min-width: 768px) {
-  .menu-button {
+  .menu-toggle {
     display: none;
   }
-}
-
-.menu-button:hover,
-.menu-button:focus {
-  fill: #2196f3;
-}
-
-.menu-button .icon-close {
-  display: none;
-  position: fixed;
-}
-
-.menu-button.is-open .icon-close {
-  display: block;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
 }
 
 .menu-container {
@@ -1084,7 +1074,6 @@ body {
 .team-list__photo {
   display: block;
   width: 100%;
-  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }

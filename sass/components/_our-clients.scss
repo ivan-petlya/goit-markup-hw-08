@@ -15,7 +15,7 @@
 }
 .our-clients-list {
   @extend %list;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
   display: flex;
   justify-content: center;
   gap: 30px;
