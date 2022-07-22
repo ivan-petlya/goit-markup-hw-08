@@ -1593,7 +1593,7 @@ body {
   color: #ffffff;
   text-align: left;
   font-size: 18px;
-  line-height: 1.875;
+  line-height: 1.87;
   letter-spacing: 0.03em;
 }
 .examples__title-box {
@@ -1607,7 +1607,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-align: left;
   margin-bottom: 4px;
 }
